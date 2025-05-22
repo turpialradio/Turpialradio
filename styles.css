@@ -1,0 +1,177 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+h1 {
+    color: #333;
+}
+body {
+    background-image: url('FONDO\ TURPIAL\ MUSIC\ 2.png');
+    background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    height: 100vh; /* Hace que el cuerpo de la página ocupe toda la altura de la ventana */
+    margin: 0; /* Elimina los márgenes predeterminados */
+}
+.iframe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+iframe {
+    max-width: 400px; /* Máximo ancho */
+    width: 100%; /* Ajusta el ancho automáticamente */
+    height: 100px;
+}
+.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+    padding: 10px;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+/* Estilo de la barra de navegación */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #181818;
+    padding: 10px 0;
+    text-align: right;
+    z-index: 1000;
+}
+
+/* Estilo de la lista */
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo de los elementos */
+.navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+/* Estilo de los enlaces */
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.navbar ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+body {
+    padding-top: 50px; /* Ajusta el espacio para que la barra no cubra el contenido */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    left: -250px;
+    top: 0;
+    transition: left 0.3s ease-in-out;
+}
+
+.menu {
+    width: 250px;
+    height: 100vh;
+    background: #0c0c0ccc;
+    color: white;
+    padding: 20px;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+
+.menu ul li:hover {
+    background: #555;
+}
+
+/* Botón pegado al menú */
+.menu-button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #414141;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    transition: right 0.3s ease-in-out;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    white-space: pre-line; /* Hace que las letras aparezcan en líneas separadas */
+}
+.criollita {
+    background-image: url('venezuela\ criollita.png'); /* Cambia 'criollita.jpg' por la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.salsa {
+    background-image: url('al\ son\ de\ la\ salsa.png'); /* Cambia 'criollita.jpg' por la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.urbe {
+    background-image: url('urbe\ tendencia.png'); /* Cambia 'criollita.jpg' por la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.merengazo {
+    background-image: url('el\ merengazo\ radio.png'); /* Cambia 'criollita.jpg' por la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.huellas {
+    background-image: url('huellas\ radio.png'); /* Cambia 'criollita.jpg' por la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
