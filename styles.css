@@ -14,6 +14,16 @@ body {
     height: 100vh; /* Hace que el cuerpo de la página ocupe toda la altura de la ventana */
     margin: 0; /* Elimina los márgenes predeterminados */
 }
+/* 🌐 Fondo especial para móviles */
+@media (max-width: 768px) {
+    body {
+        background-image: url('FONDO\ TURPIAL\ MUSIC\ MOVIL.png'); /* Usa una versión optimizada para móviles */
+        background-size: contain; /* Evita cortes y ajusta la imagen */
+        background-position: center; /* Centrado */
+        background-repeat: no-repeat;
+    }
+}
+
 .iframe-container {
     display: flex;
     justify-content: center;
@@ -147,12 +157,28 @@ body {
     background-repeat: no-repeat;
     height: 100vh;
 }
+/* Ajuste específico para pantallas menores a 768px (móviles) */
+@media (max-width: 768px) {
+    .criollita {
+        background-image: url('venezuela\ criollita\ MOVIL.png'); /* Usa una imagen optimizada para móviles */
+        background-size: contain; /* Evita recortes innecesarios */
+        background-position: top center; /* Ajusta la posición */
+    }
+}
 .salsa {
     background-image: url('al\ son\ de\ la\ salsa.png'); /* Cambia 'criollita.jpg' por la ruta de tu imagen */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
+}
+/* Ajuste específico para pantallas menores a 768px (móviles) */
+@media (max-width: 768px) {
+    .salsa {
+        background-image: url('al\ son\ de\ la\ salsa\ MOVIL.png'); /* Usa una imagen optimizada para móviles */
+        background-size: contain; /* Evita recortes innecesarios */
+        background-position: top center; /* Ajusta la posición */
+    }
 }
 .urbe {
     background-image: url('urbe\ tendencia.png'); /* Cambia 'criollita.jpg' por la ruta de tu imagen */
@@ -161,6 +187,14 @@ body {
     background-repeat: no-repeat;
     height: 100vh;
 }
+/* Ajuste específico para pantallas menores a 768px (móviles) */
+@media (max-width: 768px) {
+    .urbe {
+        background-image: url('urbe\ tendencia\ MOVIL.png'); /* Usa una imagen optimizada para móviles */
+        background-size: contain; /* Evita recortes innecesarios */
+        background-position: top center; /* Ajusta la posición */
+    }
+}
 .merengazo {
     background-image: url('el\ merengazo\ radio.png'); /* Cambia 'criollita.jpg' por la ruta de tu imagen */
     background-size: cover;
@@ -168,10 +202,34 @@ body {
     background-repeat: no-repeat;
     height: 100vh;
 }
+/* Ajuste específico para pantallas menores a 768px (móviles) */
+@media (max-width: 768px) {
+    .merengazo {
+        background-image: url('el\ merengazo\ radio\ MOVIL.png'); /* Usa una imagen optimizada para móviles */
+        background-size: contain; /* Evita recortes innecesarios */
+        background-position: top center; /* Ajusta la posición */
+    }
+}
 .huellas {
     background-image: url('huellas\ radio.png'); /* Cambia 'criollita.jpg' por la ruta de tu imagen */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
+}
+/* Ajuste específico para pantallas menores a 768px (móviles) */
+@media (max-width: 768px) {
+    .huellas {
+        background-image: url('huellas\ radio\ MOVIL.png'); /* Usa una imagen optimizada para móviles */
+        background-size: contain; /* Evita recortes innecesarios */
+        background-position: top center; /* Ajusta la posición */
+    }
+}
+/* Ajuste específico para pantallas menores a 768px (móviles) */
+@media (max-width: 768px) {
+    .turpial {
+        background-image: url('FONDO\ TURPIAL\ MUSIC\ MOVIL.png'); /* Usa una imagen optimizada para móviles */
+        background-size: contain; /* Evita recortes innecesarios */
+        background-position: top center; /* Ajusta la posición */
+    }
 }
