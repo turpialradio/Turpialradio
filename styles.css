@@ -102,8 +102,18 @@ body {
     left: -250px;
     top: 0;
     transition: left 0.3s ease-in-out;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
 }
-
+/* Ajuste del menú en móviles */
+@media (max-width: 768px) {
+    .menu {
+        width: 80%; /* Ajustar el ancho al 80% de la pantalla */
+        height: 100vh;
+        background: #0c0c0ccc;
+        color: white;
+        padding: 10px; /* Reducir el padding */
+    }
+}
 .menu {
     width: 250px;
     height: 100vh;
