@@ -7,13 +7,15 @@ h1 {
     color: #333;
 }
 body {
-    background-image: url('FONDO\ TURPIAL\ MUSIC\ 2.png');
-    background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+    background-image: url('FONDO TURPIAL MUSIC 2.png');
+    background-size: cover; /* Ajusta la imagen al tamaño de la pantalla */
     background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    height: 100vh; /* Hace que el cuerpo de la página ocupe toda la altura de la ventana */
+    background-repeat: no-repeat; /* Evita la repetición */
+    background-attachment: fixed; /* Mantiene la imagen fija mientras se desplaza */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
     margin: 0; /* Elimina los márgenes predeterminados */
 }
+
 /* 🌐 Fondo especial para móviles */
 @media (max-width: 768px) {
     body {
