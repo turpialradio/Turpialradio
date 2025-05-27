@@ -151,8 +151,8 @@ body {
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    background: #414141;
-    color: white;
+    background: #eee022;
+    color: rgb(12, 10, 10);
     padding: 10px;
     cursor: pointer;
     border: none;
