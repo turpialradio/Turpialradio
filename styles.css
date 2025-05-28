@@ -201,7 +201,7 @@ body {
 }
 /* Ajuste específico para pantallas menores a 768px (móviles) */
 @media (max-width: 768px) {
-    .urbe {
+    .urbetendencia {
         background-image: url('urbe\ tendencia\ MOVIL.png'); /* Usa una imagen optimizada para móviles */
         background-size: contain; /* Evita recortes innecesarios */
         background-position: top center; /* Ajusta la posición */
