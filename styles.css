@@ -245,3 +245,67 @@ body {
         background-position: top center; /* Ajusta la posición */
     }
 }
+
+.nuestrasemisoras {
+    background-image: url('fondo-negro-foco-luz_1017-27230.avif'); /* Imagen de fondo */
+    background-size: cover; /* Ajusta para que la imagen cubra toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat;
+    height: 100vh; /* Asegura que el fondo cubra toda la pantalla */
+}
+
+/* Ajuste para móviles: el fondo debe expandirse completamente */
+@media (max-width: 768px) {
+    .nuestrasemisoras {
+        background-image: url('fondo-negro-foco-luz_1017-27230.avif'); /* Usa la misma imagen o una específica */
+        background-size: cover; /* Asegura que se expanda en móviles */
+        background-position: center; /* Mantiene la posición */
+        height: 100vh; /* Mantiene la cobertura total en móviles */
+    }
+}
+
+
+
+.emisoras-container {
+    display: flex; /* Activa Flexbox */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 50px; /* Espacio entre emisoras */
+    flex-wrap: wrap; /* Permite que se acomoden bien en pantallas pequeñas */
+}
+
+.emisora {
+    font-size: 15px; /* Ajusta el tamaño del texto */
+    text-align: center;
+    flex: 1; /* Distribuye los elementos de manera uniforme */
+    max-width: 150px; /* Limita el ancho para mejor presentación */
+}
+
+.emisora img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Bordes redondeados para mejor estilo */
+}
+
+/* Ajuste para móviles: las emisoras se colocarán una debajo de la otra */
+@media (max-width: 668px) {
+    .emisoras-container {
+        font-size: 10px; /* Reduce el tamaño en pantallas pequeñas */
+        flex-direction: column; /* Cambia a diseño en columna */
+        align-items: center; /* Centra los elementos en móviles */
+    }
+
+    .emisora {
+        max-width: 40%; /* Ocupa todo el ancho disponible */
+    }
+}
+
+/* Ajuste para los títulos de las emisoras */
+.emisora h2 a {
+    color: white; /* Cambia el color del texto a blanco */
+    text-decoration: none; /* Elimina la línea bajo el enlace */
+}
+
+/* Opcional: Cambiar el color al pasar el cursor */
+.emisora h2 a:hover {
+    color: #ddd; /* Un tono más claro al pasar el cursor */
+}
