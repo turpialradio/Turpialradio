@@ -1,31 +1,36 @@
+/* ========================================= */
+/*                Base Styles              */
+/* ========================================= */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #f4f4f4;
-}
-h1 {
-    color: #333;
-}
-body {
-    background-image: url('FONDO TURPIAL MUSIC 2.png');
-    background-size: cover; /* Ajusta la imagen al tamaño de la pantalla */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita la repetición */
-    background-attachment: fixed; /* Mantiene la imagen fija mientras se desplaza */
-    height: 100vh; /* Ocupa toda la altura de la ventana */
-    margin: 0; /* Elimina los márgenes predeterminados */
+    /* Fondo lineal aplicado en todas las pantallas */
+    background: linear-gradient(to bottom, lab(0% 0 0), #383838);
+    height: 100vh;
+    margin: 0;
 }
 
-/* 🌐 Fondo especial para móviles */
+/* ========================================= */
+/*             Responsive (Móviles)        */
+/* ========================================= */
 @media (max-width: 768px) {
     body {
-        background-image: url('FONDO\ TURPIAL\ MUSIC\ MOVIL.png'); /* Usa una versión optimizada para móviles */
-        background-size: contain; /* Evita cortes y ajusta la imagen */
-        background-position: center; /* Centrado */
-        background-repeat: no-repeat;
+        /* Se mantiene el mismo fondo pero aquí podrías ajustar otros parámetros si es necesario */
+        background: linear-gradient(to bottom, hsla(0, 0%, 0%, 0.945), #383838);
+        height: 100vh;
     }
 }
 
+/* ========================================= */
+/*              Tipografía                 */
+/* ========================================= */
+h1 {
+    color: #333;
+}
+
+/* ========================================= */
+/*           Contenedores de IFrame        */
+/* ========================================= */
 .iframe-container {
     display: flex;
     justify-content: center;
@@ -33,49 +38,55 @@ body {
     width: 100%;
 }
 
+/* IFrame */
 iframe {
-    max-width: 400px; /* Máximo ancho */
-    width: 100%; /* Ajusta el ancho automáticamente */
+    max-width: 400px; /* Máximo ancho del iframe */
+    width: 100%;      /* Se ajusta al 100% del contenedor */
     height: 100px;
 }
+
+/* ========================================= */
+/*              Elemento Fixed             */
+/* ========================================= */
 .fixed-bottom {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
     padding: 10px;
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centrado horizontal */
+    align-items: center;     /* Centrado vertical */
+    z-index: 9999;           /* Asegura que esté por encima de otros elementos */
 }
 
-/* Estilo de la barra de navegación */
+
+/* ========================================= */
+/*          Barra de Navegación              */
+/* ========================================= */
 .navbar {
-    position: fixed;
+    position: absolute; /* Ubicada respecto al documento */
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #181818;
+    background-color: hsl(0, 0%, 5%);
     padding: 10px 0;
     text-align: right;
     z-index: 1000;
 }
 
-/* Estilo de la lista */
 .navbar ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-/* Estilo de los elementos */
 .navbar ul li {
     display: inline;
     margin: 0 15px;
 }
 
-/* Estilo de los enlaces */
 .navbar ul li a {
     text-decoration: none;
     color: white;
@@ -88,224 +99,449 @@ iframe {
     background-color: #555;
     border-radius: 5px;
 }
-body {
-    padding-top: 50px; /* Ajusta el espacio para que la barra no cubra el contenido */
-}
 
+/* ========================================= */
+/*              Base Styles                  */
+/* ========================================= */
 body {
-    margin: 0;
+    margin: 0;                /* Elimina márgenes extras */
+    padding-top: 50px;        /* Espacio para evitar que la navbar tape contenido */
     font-family: Arial, sans-serif;
 }
 
-.menu-container {
+/* ========================================= */
+/*              Contenido Principal          */
+/* ========================================= */
+/* Asegura que el primer elemento (main) no quede oculto por la navbar */
+main {
+    padding-top: 50px; /* Ajusta según la altura real de la navbar */
+}
+
+
+/* ========================================= */
+/*            Menu Container               */
+/* ========================================= */
+.menu-container { 
     display: flex;
-    align-items: center;
-    position: fixed;
-    left: -250px;
-    top: 0;
-    transition: left 0.3s ease-in-out;
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    align-items: center; 
+    position: fixed; 
+    left: -250px; 
+    top: 0; 
+    transition: left 0.3s ease-in-out; 
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */ 
+} 
+.menu-container.active {
+  left: 0;              /* Estado abierto */
 }
-/* Ajuste del menú en móviles */
-@media (max-width: 768px) {
-    .menu {
-        width: 80%; /* Ajustar el ancho al 80% de la pantalla */
-        height: 100vh;
-        background: #0c0c0ccc;
-        color: white;
-        padding: 10px; /* Reducir el padding */
-    }
-}
-.menu {
-    width: 250px;
-    height: 100vh;
-    background: #0c0c0ccc;
-    color: white;
-    padding: 20px;
-}
+/* Ajuste del menú en móviles */ 
+@media (max-width: 768px) 
+{ .menu { width: 80%; /* Ajustar el ancho al 80% de la pantalla */ 
+    height: 100vh; 
+    background: lab(0% 0 0 / 0.884); 
+    color: white; 
+    padding: 10px; /* Reducir el padding */ } 
+} 
+.menu { 
+    width: 250px; 
+    height: 100vh; 
+    background: rgba(0, 0, 0, 0.884); 
+    color: white; 
+    padding: 20px; 
+} 
+.menu ul { 
+    list-style-type: none; 
+    padding: 0; 
+} 
+.menu ul li { 
+    padding: 10px; 
+    border-bottom: 1px solid #ddd; 
+} 
+.menu ul li a { 
+    text-decoration: none; 
+    color: #ffffff; 
+    font-weight: bold; 
+} 
+.menu ul li:hover { 
+    background: #555; 
+} 
+/* Botón pegado al menú */ 
+.menu-button { 
+    position: absolute; 
+    right: 0; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    background: #eee022; 
+    color: rgb(12, 10, 10); 
+    padding: 10px; 
+    cursor: pointer; 
+    border: none; 
+    transition: right 0.3s ease-in-out; 
+    text-align: center; 
+    font-size: 15px; 
+    font-weight: bold; 
+    white-space: pre-line; /* Hace que las letras aparezcan en líneas separadas */ }
 
-.menu ul {
-    list-style-type: none;
-    padding: 0;
-}
+/* ========================================= */
+/*       Fondos para Páginas/Secciones       */
+/* ========================================= */
 
-.menu ul li {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-}
-
-.menu ul li a {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
-}
-
-
-.menu ul li:hover {
-    background: #555;
-}
-
-/* Botón pegado al menú */
-.menu-button {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #eee022;
-    color: rgb(12, 10, 10);
-    padding: 10px;
-    cursor: pointer;
-    border: none;
-    transition: right 0.3s ease-in-out;
-    text-align: center;
-    font-size: 15px;
-    font-weight: bold;
-    white-space: pre-line; /* Hace que las letras aparezcan en líneas separadas */
-}
+/* ---------- Criollita ---------- */
 .criollita {
-    background-image: url('venezuela\ criollita.png'); /* Cambia 'criollita.jpg' por la ruta de tu imagen */
+    background-image: url('venezuela\ criollita.png'); /* Imagen para escritorio */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
 }
-/* Ajuste específico para pantallas menores a 768px (móviles) */
+
 @media (max-width: 768px) {
     .criollita {
-        background-image: url('venezuela\ criollita\ MOVIL.png'); /* Usa una imagen optimizada para móviles */
+        background-image: url('venezuela\ criollita\ MOVIL.png'); /* Imagen optimizada para móviles */
         background-size: contain; /* Evita recortes innecesarios */
-        background-position: top center; /* Ajusta la posición */
+        background-position: top center; /* Posición ajustada para móviles */
     }
 }
+
+/* ---------- Salsa ---------- */
 .salsa {
-    background-image: url('al\ son\ de\ la\ salsa.png'); /* Cambia 'criollita.jpg' por la ruta de tu imagen */
+    background-image: url('al\ son\ de\ la\ salsa.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
 }
-/* Ajuste específico para pantallas menores a 768px (móviles) */
+
 @media (max-width: 768px) {
     .salsa {
-        background-image: url('al\ son\ de\ la\ salsa\ MOVIL.png'); /* Usa una imagen optimizada para móviles */
-        background-size: contain; /* Evita recortes innecesarios */
-        background-position: top center; /* Ajusta la posición */
+        background-image: url('al\ son\ de\ la\ salsa\ MOVIL.png');
+        background-size: contain;
+        background-position: top center;
     }
 }
+
+/* ---------- Urbetendencia ---------- */
 .urbetendencia {
-    background-image: url('urbe\ tendencia.png'); /* Cambia 'criollita.jpg' por la ruta de tu imagen */
+    background-image: url('urbe\ tendencia.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
 }
-/* Ajuste específico para pantallas menores a 768px (móviles) */
+
 @media (max-width: 768px) {
     .urbetendencia {
-        background-image: url('urbe\ tendencia\ MOVIL.png'); /* Usa una imagen optimizada para móviles */
-        background-size: contain; /* Evita recortes innecesarios */
-        background-position: top center; /* Ajusta la posición */
+        background-image: url('urbe\ tendencia\ MOVIL.png');
+        background-size: contain;
+        background-position: top center;
     }
 }
+
+/* ---------- Merengazo ---------- */
 .merengazo {
-    background-image: url('el\ merengazo\ radio.png'); /* Cambia 'criollita.jpg' por la ruta de tu imagen */
+    background-image: url('el\ merengazo\ radio.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
 }
-/* Ajuste específico para pantallas menores a 768px (móviles) */
+
 @media (max-width: 768px) {
     .merengazo {
-        background-image: url('el\ merengazo\ radio\ MOVIL.png'); /* Usa una imagen optimizada para móviles */
-        background-size: contain; /* Evita recortes innecesarios */
-        background-position: top center; /* Ajusta la posición */
+        background-image: url('el\ merengazo\ radio\ MOVIL.png');
+        background-size: contain;
+        background-position: top center;
     }
 }
+
+/* ---------- Huellas ---------- */
 .huellas {
-    background-image: url('huellas\ radio.png'); /* Cambia 'criollita.jpg' por la ruta de tu imagen */
+    background-image: url('huellas\ radio.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
 }
-/* Ajuste específico para pantallas menores a 768px (móviles) */
+
 @media (max-width: 768px) {
     .huellas {
-        background-image: url('huellas\ radio\ MOVIL.png'); /* Usa una imagen optimizada para móviles */
-        background-size: contain; /* Evita recortes innecesarios */
-        background-position: top center; /* Ajusta la posición */
+        background-image: url('huellas\ radio\ MOVIL.png');
+        background-size: contain;
+        background-position: top center;
     }
 }
-/* Ajuste específico para pantallas menores a 768px (móviles) */
+
+/* ---------- Turpial ---------- */
+.turpial {
+    background-image: url('FONDO\ TURPIAL\ MUSIC\ 2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
 @media (max-width: 768px) {
     .turpial {
-        background-image: url('FONDO\ TURPIAL\ MUSIC\ MOVIL.png'); /* Usa una imagen optimizada para móviles */
-        background-size: contain; /* Evita recortes innecesarios */
-        background-position: top center; /* Ajusta la posición */
+        background-image: url('FONDO\ TURPIAL\ MUSIC\ MOVIL.png');
+        background-size: contain;
+        background-position: top center;
     }
 }
 
+/* ========================================= */
+/*        Sección "Nuestras Emisoras"        */
+/* ========================================= */
 .nuestrasemisoras {
     background-image: url('fondo-negro-foco-luz_1017-27230.avif'); /* Imagen de fondo */
-    background-size: cover; /* Ajusta para que la imagen cubra toda la pantalla */
-    background-position: center; /* Centra la imagen */
+    background-size: cover;         /* La imagen cubre toda la sección */
+    background-position: center;    /* Imagen centrada */
     background-repeat: no-repeat;
-    height: 100vh; /* Asegura que el fondo cubra toda la pantalla */
+    height: 100vh;                  /* Ocupa toda la altura del viewport */
 }
 
-/* Ajuste para móviles: el fondo debe expandirse completamente */
+/* Ajuste para móviles en Nuestras Emisoras */
 @media (max-width: 768px) {
     .nuestrasemisoras {
-        background-image: url('fondo-negro-foco-luz_1017-27230.avif'); /* Usa la misma imagen o una específica */
-        background-size: cover; /* Asegura que se expanda en móviles */
-        background-position: center; /* Mantiene la posición */
-        height: 100vh; /* Mantiene la cobertura total en móviles */
+        /* Se mantiene el mismo fondo y cobertura total en móviles */
+        background-image: url('fondo-negro-foco-luz_1017-27230.avif');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
     }
 }
 
-
-
+/* ========================================= */
+/*        Estilos para Contenedor de Emisoras       */
+/* ========================================= */
 .emisoras-container {
-    display: flex; /* Activa Flexbox */
-    justify-content: center; /* Centra los elementos horizontalmente */
-    gap: 50px; /* Espacio entre emisoras */
-    flex-wrap: wrap; /* Permite que se acomoden bien en pantallas pequeñas */
+    display: flex;                /* Activa Flexbox */
+    justify-content: center;      /* Centra los elementos horizontalmente */
+    gap: 50px;                    /* Espacio entre emisoras */
+    flex-wrap: wrap;              /* Permite que los elementos se acomoden en varias filas */
 }
 
 .emisora {
-    font-size: 15px; /* Ajusta el tamaño del texto */
-    text-align: center;
-    flex: 1; /* Distribuye los elementos de manera uniforme */
-    max-width: 150px; /* Limita el ancho para mejor presentación */
+    font-size: 15px;              /* Tamaño base del texto */
+    text-align: center;           /* Centra el contenido */
+    flex: 1;                    /* Permite distribuir uniformemente los elementos */
+    max-width: 150px;             /* Limita el ancho para una mejor presentación */
 }
 
 .emisora img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px; /* Bordes redondeados para mejor estilo */
+    border-radius: 10px;          /* Bordes redondeados para mejorar el estilo */
 }
 
-/* Ajuste para móviles: las emisoras se colocarán una debajo de la otra */
+/* ========================================= */
+/*      Ajustes Responsivos para Emisoras    */
+/* ========================================= */
 @media (max-width: 668px) {
     .emisoras-container {
-        font-size: 10px; /* Reduce el tamaño en pantallas pequeñas */
-        flex-direction: column; /* Cambia a diseño en columna */
-        align-items: center; /* Centra los elementos en móviles */
+        font-size: 10px;        /* Reduce el tamaño de fuente en pantallas pequeñas */
+        flex-direction: column; /* Organiza los elementos en columna */
+        align-items: center;    /* Centra los elementos en dispositivos móviles */
     }
 
     .emisora {
-        max-width: 40%; /* Ocupa todo el ancho disponible */
+        max-width: 40%;         /* Ajuste del ancho para ocupar mayor espacio en móvil */
     }
 }
 
-/* Ajuste para los títulos de las emisoras */
+/* ========================================= */
+/*          Estilos para Títulos de Emisoras   */
+/* ========================================= */
 .emisora h2 a {
-    color: white; /* Cambia el color del texto a blanco */
-    text-decoration: none; /* Elimina la línea bajo el enlace */
+    color: white;
+    text-decoration: none;        /* Elimina subrayados */
 }
 
-/* Opcional: Cambiar el color al pasar el cursor */
+/* Cambio de color al pasar el cursor */
 .emisora h2 a:hover {
-    color: #ddd; /* Un tono más claro al pasar el cursor */
+    color: #ddd;
+}
+
+/* ========================================= */
+/*           ESTILOS GLOBALES              */
+/* ========================================= */
+body {
+    position: relative;       /* Contenedor de referencia para elementos absolutos */
+    min-height: 100vh;        /* Ocupa toda la altura del viewport */
+    margin: 0;                /* Elimina márgenes predeterminados */
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #181818, #383838);
+    text-align: center;
+}
+
+/* ========================================= */
+/*                PORTADA                  */
+/* ========================================= */
+.portada {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;          /* Permite reorganizar elementos en varias filas */
+    width: 100%;
+    padding: 0;
+}
+
+.imagen {
+    width: 40%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Ajustes para móviles en la portada */
+@media (max-width: 600px) {
+    .portada {
+        flex-direction: column;
+        align-items: center;
+    }
+    .imagen {
+        width: 90%;
+        max-width: 100%;
+    }
+}
+
+/* ========================================= */
+/*     BARRA DIVISORIA Y REDES SOCIALES     */
+/* ========================================= */
+.barra-divisoria {
+    height: 20px;
+    background-color: hsl(0, 0%, 7%);
+    margin-top: 10px;
+    position: relative;
+}
+
+.redes-sociales {
+    position: absolute;
+    right: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.redes-sociales a img {
+    width: 30px;
+    height: auto;
+}
+
+/* Ajustes para móviles en la barra y redes sociales */
+@media (max-width: 600px) {
+    .redes-sociales {
+        right: 30px;
+    }
+    .redes-sociales a img {
+        width: 30px;
+    }
+}
+
+/* ========================================= */
+/*         SECCIÓN DE CONTENIDO            */
+/* (Columna izquierda: Imagen, Columna derecha: Reproductor) */
+/* ========================================= */
+.content-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 1210px;
+    padding: 0 10px;
+}
+
+.left-col,
+.right-col {
+    flex: 1;
+}
+
+/* Imagen en la columna izquierda */
+.responsive-img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Reproductor: versión escritorio y móvil */
+
+/* Reproductor de escritorio */
+.player-container {
+    position: relative;
+    width: 100%;
+    max-width: 574px;
+    height: 400px;
+    background-color: #181818;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.player-container iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* Controles de visibilidad para reproductores: 
+   Por defecto se muestra la versión de escritorio y se oculta la de móvil */
+.player-desktop {
+    display: block;
+}
+.player-mobile {
+    display: none;
+}
+
+/* En dispositivos móviles se invierte la visibilidad */
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .player-container {
+        display: none; /* Oculta la versión de escritorio */
+    }
+    .player-mobile {
+        display: block;
+        margin: 20px auto;
+    }
+}
+
+/* Opcional: Si deseas ajustes adicionales para reproductores en móviles pequeños */
+@media (max-width: 480px) {
+    .player-mobile {
+        margin-top: 10px;
+    }
+}
+
+/* ========================================= */
+/*                FOOTER                   */
+/* ========================================= */
+.footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 1px;
+    position: relative;  /* Se coloca al final del flujo de contenido */
+    width: 100%;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+/* Ajustes para tablets y móviles en el footer */
+@media (max-width: 768px) {
+    .footer {
+        padding: 8px;
+        font-size: 12px;
+    }
+}
+
+/* Ajustes para móviles pequeños en el footer */
+@media (max-width: 480px) {
+    .footer {
+        padding: 10px;
+        font-size: 11px;
+    }
 }

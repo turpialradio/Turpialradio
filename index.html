@@ -1,50 +1,76 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Radio Turpial Music</title>
-    <link rel="stylesheet" href="styles.css"> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Radio Turpial Music</title>
+  <link rel="stylesheet" href="styles.css"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="nuestrasemisoras.html">Nuestras Emisoras</a></li>
-        </ul>
-    </nav>
-    
-</body>
-</html>
-<div class="fixed-bottom">
-        <iframe src="https://player.mipanel.stream/player-sonic/6742" frameborder="0" width="500" height="105"></iframe>
-
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nuestrasemisoras.html">Nuestras Emisoras</a></li>
+    </ul>
+  </nav>
+  
+  <!-- Portada -->
+<div class="portada">
+  <img src="PORTADA RTM.png" alt="Portada Radio Turpial Music" class="imagen">
+  <img src="portada de publicidad.png" alt="Portada de Publicidad" class="imagen">
 </div>
 
+<!-- Barra Divisoria con Redes Sociales -->
+<div class="barra-divisoria">
+  <div class="redes-sociales">
+    <a href="https://facebook.com" target="_blank"><img src="facebook-icon.webp" alt="Facebook"></a>
+    <a href="https://twitter.com" target="_blank"><img src="logo tiktok.png" alt="Twitter"></a>
+    <a href="https://instagram.com" target="_blank"><img src="logo instagran.png" alt="Instagram"></a>
+  </div>
+</div>
+
+<!-- Sección de Contenido -->
+<div class="content-section">
+  <!-- Columna Izquierda: Imagen -->
+  <div class="left-col">
+    <img src="publi gif.gif" alt="Imagen responsiva" class="responsive-img">
+  </div>
+
+  <!-- Columna Derecha: Reproductores -->
+  <div class="right-col">
+    <!-- Reproductor para escritorio -->
+    <div class="player-container player-desktop">
+      <iframe src="https://player.mipanel.stream/player-web/6742" frameborder="0"></iframe>
+    </div>
+    <!-- Reproductor solo para móviles -->
+    <div class="player-mobile">
+      <iframe src="https://player.mipanel.stream/player-box/6742/yellow" frameborder="0" width="400" height="99"></iframe>
+          
+    </div>
+  </div>
+</div>
 
 <div class="menu-container">
-    <div class="menu" id="menu">
-        <h2>📻 Emisoras de Radio</h2>
-        <ul>
-            <li><a href="turpial.html">📻 Radio Turpial Music Ve (variado)</a></li>
-                <li><a href="criollita.html">📻 Venezuela Criollita Radio (llaneras)</a></li>
-                <li><a href="salsa.html">📻 Al Son de la Salsa Radio (salsa)</a></li>
+        <div class="menu" id="menu">
+            <h2>📻 Emisoras de Radio</h2>
+            <ul>
+                <li><a href="turpial.html">📻 Radio Turpial Music Ve (variado)</a></li>
                 <li><a href="urbetendencia.html">📻 Urbe Tendencia Radio (reggaetón, trap, hip hop, R&B)</a></li>
-                <li><a href="merengazo.html">📻 El Merengazo Radio</a></li>
                 <li><a href="huellas.html">📻 Huellas Radio (variado)</a></li>
-        </ul>
+            </ul>
+        </div>
+        <button class="menu-button" onclick="toggleMenu()">E
+            M
+            I
+            S
+            O
+            R
+            A
+            S</button>
     </div>
-    <button class="menu-button" onclick="toggleMenu()">E
-        M
-        I
-        S
-        O
-        R
-        A
-        S</button>
-        
-</div>
-
 <script src="script.js"></script>
-</body>
-    
+<!-- Footer -->
+<footer class="footer">
+  <p>&copy; 2025 Radio Turpial Music. Todos los derechos reservados.</p>
+</footer>
