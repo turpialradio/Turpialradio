@@ -1,45 +1,130 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Radio Turpial Music</title>
-    <link rel="stylesheet" href="styles.css"> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Radio Turpial Music</title>
+  <link rel="stylesheet" href="styles.css"> 
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
-<body class="turpial"> <!-- Agregamos la clase aquí -->
+<body>
+
+  <!-- HEADER: Navegación principal -->
+  <header class="site-header">
     <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="App-RadioTurpialMusicVE.apk" download>Descargar nuestra app</a></li>
-                        
-        </ul>
+      <ul class="nav-list">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="App-RadioTurpialMusicVE.apk" download>Descargar app</a></li>
+      </ul>
     </nav>
-    
-</body>
-</html>
-<div class="fixed-bottom">
- <iframe src="https://player.mipanel.stream/player-sonic/6742" frameborder="0" width="500" height="105"></iframe>
+  </header>
+
+  <main>
+
+    <!-- HERO: Portada y publicidad -->
+    <section class="hero">
+      <img src="PORTADA RTM.png" alt="Portada Radio Turpial Music" class="hero-img">
+      <img src="portada de publicidad.png" alt="Publicidad" class="hero-img">
+    </section>
+
+    <!-- REDES SOCIALES -->
+    <section class="social-bar">
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com"  target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    </section>
+
+    <!-- CONTENIDO PRINCIPAL: dos columnas -->
+    <section class="content-wrapper">
+
+      <article class="left-col">
+  <img src="publi gif.gif" alt="Publicidad dinámica" class="responsive-img">
+
+  <!-- Sección de descarga -->
+  <div class="download-section">
+    <a href="App-RadioTurpialMusicVE.apk" download>
+      <img
+        src="nuestra app movil.gif"
+        alt="Descargar App"
+        class="app-download-btn">
+    </a>
+    <p class="download-text">
+      🎶 Lleva la vibra Turpial a donde vayas. ¡Descárgala ahora!
+    </p>
+  </div>
+
+  <!-- Instagram Feed (solo móvil) -->
+  <div class="instagram-mobile-only">
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+    <div
+      class="elfsight-app-9da8bae3-ff89-4635-b4e8-68c9e80c88a2"
+      data-elfsight-app-lazy>
+    </div>
+  </div>
+
+  <!-- Facebook Feed de Elfsight -->
+  <div class="facebook-feed-widget" aria-label="Feed de Facebook de Radio Turpial Music">
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+    <div
+      class="elfsight-app-284b2014-3c83-4959-ae0e-3729527a1d5e"
+      data-elfsight-app-lazy>
+    </div>
+  </div>
+</article>
+
+
+       <!-- Columna derecha: reproductores + Instagram Feed -->
+<aside class="right-col">
+ <!-- Sección de audio -->
+<div class="audio-player-wrapper">
+  <p class="audio-player-text">
+    🎧 Sintoniza la mejor vibra musical de Radio Turpial Music aquí:
+  </p>
+  <iframe
+    src="https://player.mipanel.stream/player-sonic/6742"
+    frameborder="0"
+    width="100%"
+    height="105"
+    title="Reproductor de Radio Turpial Music">
+  </iframe>
+
+
+  <!-- Instagram Feed de Elfsight -->
+  <div class="instagram-feed-widget">
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+    <div
+      class="elfsight-app-9da8bae3-ff89-4635-b4e8-68c9e80c88a2"
+      data-elfsight-app-lazy>
+    </div>
+  </div>
+</aside>
+    </section>
+
+    <div class="menu-container">
+  <button class="menu-button" aria-haspopup="true" aria-expanded="false" onclick="toggleMenu()">
+    E<br/>M<br/>I<br/>S<br/>O<br/>R<br/>A<br/>S
+  </button>
+
+  <nav class="menu" id="menu" role="menu">
+    <h2>📻 Emisoras de Radio</h2>
+    <ul>
+      <li><a role="menuitem" href="turpial.html">📻 Radio Turpial Music Ve</a></li>
+      <li><a role="menuitem" href="urbetendencia.html">📻 Urbe Tendencia Radio</a></li>
+      <li><a role="menuitem" href="huellas.html">📻 Huellas Radio</a></li>
+    </ul>
+  </nav>
 </div>
 
 
-<div class="menu-container">
-        <div class="menu" id="menu">
-            <h2>📻 Emisoras de Radio</h2>
-            <ul>
-                <li><a href="turpial.html">📻 Radio Turpial Music Ve (variado)</a></li>
-                <li><a href="urbetendencia.html">📻 Urbe Tendencia Radio (reggaetón, trap, hip hop, R&B)</a></li>
-                <li><a href="huellas.html">📻 Huellas Radio (variado)</a></li>
-            </ul>
-        </div>
-        <button class="menu-button" onclick="toggleMenu()">E
-            M
-            I
-            S
-            O
-            R
-            A
-            S</button>
-    </div>
 
-<script src="script.js"></script>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2025 Radio Turpial Music. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
+</html>
