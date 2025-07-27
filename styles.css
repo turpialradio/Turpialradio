@@ -465,6 +465,47 @@ body {
     height: auto;
     border-radius: 5px;
 }
+/*NUESTRA APP*/
+.download-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: flex-start;
+  max-width: 1210px;
+  margin: -135px auto 0; /* elimina el margen negativo */
+  padding: 0 10px;
+  position: relative;
+  z-index: 2;
+}
+
+
+.app-download-btn {
+  width: 595px;
+  max-width: 100%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border-radius: 5px;
+}
+
+.app-download-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Estilo para móviles */
+@media screen and (max-width: 768px) {
+  .download-section {
+    justify-content: center;
+    padding: 100px;
+  }
+
+  .app-download-btn {
+    width: 100%;
+    max-width: 520px;
+  }
+}
+
+
+
 
 /* Reproductor: versión escritorio y móvil */
 
