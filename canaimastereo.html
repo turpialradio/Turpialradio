@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Canaima Stereo Naguanagua</title>
+  <link rel="stylesheet" href="styles.css"> 
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <!-- CSS del reproductor Luna2 -->
+  <link href="https://extassisnetwork.com/player/Luna2/luna.css" type="text/css" rel="stylesheet">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      height: 100%;
+    }
+    .player-wrapper {
+      position: fixed;
+      top: 60px; /* deja visible el header */
+      left: 0;
+      width: 100%;
+      height: calc(100% - 120px); /* deja visible header + footer */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .blur {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      filter: blur(8px);
+      opacity: 0.4;
+    }
+    .extassis {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+
+   <!-- HEADER -->
+<header class="site-header">
+  <button class="menu-toggle" aria-label="Abrir menú"><i class="fas fa-bars"></i></button>
+  <nav class="navbar">
+    <ul class="nav-list">
+      <li><a href="index.html">Inicio</a></li>
+      <li class="dropdown">
+  <a href="#">Más Emisoras ▾</a>
+  <ul class="dropdown-content">
+    <li><a href="index.html">📻 Radio Turpial Music</a></li>
+    <li><a href="urbetendencia.html">📻 Urbe Tendencia Radio</a></li>
+    <li><a href="huellas.html">📻 Huellas Radio</a></li>
+    <li><a href="canaimastereo.html">📻 Canaima Stereo</a></li>
+  </ul>
+</li>
+
+      <li><a href="App-RadioTurpialMusicVE.apk" download>Descargar app</a></li>
+      <li><a href="https://player.mipanel.stream/pedido/6742">Solicitud de Canciones</a></li>
+      <li><a href="https://player.mipanel.stream/chat/6742">Chat</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <!-- REPRODUCTOR LUNA2 -->
+  <main>
+    <div class="player-wrapper">
+      <!-- Fondo difuminado -->
+      <img class="blur" src="https://github.com/turpialradio/Turpialradio/blob/main/panel%20exagonales.jpg?raw=true" alt="Fondo">
+
+      <!-- Player -->
+      <div class="extassis" id="extassis"
+        data-userinterface="big"
+        data-backgroundcolor="linear-gradient(135deg, rgba(0, 0, 0, 0.3) 100%, rgba(255, 255, 255, 0.3) 0%)"
+        data-fontcolor="#ffffff"
+        data-hightlightcolor="#ff0000"
+        data-fontname="Montserrat"
+        data-googlefont="Montserrat"
+        data-fontratio="0.4"
+        data-radioname="Canaima Stereo Naguanagua"
+        data-scroll="true"
+        data-coverimage="https://cdn-profiles.tunein.com/s196693/images/logod.jpg?t=638344720130000000"
+        data-onlycoverimage="false"
+        data-coverstyle="animated"
+        data-usevisualizer="real"
+        data-visualizertype="6"
+        data-metadatatechnic="corsproxy"
+        data-corsproxy=""
+        data-usestreamcorsproxy="true"
+        data-streamurl="https://stream-174.zeno.fm/cd7isb0ojlruv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJjZDdpc2Iwb2pscnV2IiwiaG9zdCI6InN0cmVhbS0xNzQuemVuby5mbSIsInJ0dGwiOjUsImp0aSI6IkVHTFlaOHh0UTVhVFNMU2lST3dibHciLCJpYXQiOjE3NTY0MDY3MTUsImV4cCI6MTc1NjQwNjc3NX0.0X_sRuSYBww8bS-yKcBwL_wJzN7yjMmnZ4vTolo3vbs&adtonosListenerId=01JJA15125E0JCQKK4MVKJ7TYE&amp;aw_0_req_lsid=5fa8f15488d97950ce46f62eb5235571&amp;dyn-uid=3207312471666977836&amp;an-uid=1747816517336741310&amp;dot-uid=0c582204002e1413e0e10a68&amp;triton-uid=cookie%3A849ed99c-2ba0-499e-aa54-1a92acd7509a&amp;amb-uid=7755642288503449780&amp;dbm-uid=CAESEO24JhJjkoS4t4gtikzy0SY"
+        data-streamtype="shoutcast2"
+        data-shoutcastpath="/live"
+        data-shoutcastid="1"
+        data-metadatainterval="20000"
+        data-volume="100"
+        data-autoplay="true"
+        data-displayliveicon="false"
+        data-debug="false"
+        data-multicolorvisualizer="true"
+        data-color1="#ff0000"
+        data-color2="#06ff00"
+        data-color3="#fff600"
+        data-color4="#0054ff"
+        data-visualizeropacity="0.9"
+        data-displayvisualizericon="true">
+      </div>
+    </div>
+  </main>
+
+<!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2025 Radio Turpial Music, Todos los derechos reservados.</p>
+  </footer>
+  <!-- Scripts Player -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" id="jquery-core-js"></script>
+  <script>
+    $radioURL = "https://stream-179.zeno.fm/t8mvsdty0pxvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ0OG12c2R0eTBweHZ2IiwiaG9zdCI6InN0cmVhbS0xNzkuemVuby5mbSIsInJ0dGwiOjUsImp0aSI6IldHeUJ1REVqU202WnFkNElrU3RVMVEiLCJpYXQiOjE3NTYzODcxMzMsImV4cCI6MTc1NjM4NzE5M30.8pgircP9L6dJIgl7YFuQsH2YWSAjWTYuLrqKxrK6eMo";
+    var animationactive = 0;
+    var songMem = new Array();
+    var ShowAlbumCover = true;
+  </script>
+  <script src="https://extassisnetwork.com/player/Luna2/luna.js"></script>
+  <script src="https://extassisnetwork.com/player/Luna2/luna2.js"></script>
+  <script src="https://extassisnetwork.com/player/Luna2/luna3.js"></script>
+
+  
+
+  <script src="script.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.querySelector('.menu-toggle');
+    const navList = document.querySelector('.nav-list');
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    toggle.addEventListener('click', () => {
+      navList.classList.toggle('active');
+    });
+
+    dropdowns.forEach(drop => {
+      drop.addEventListener('click', (e) => {
+        e.stopPropagation(); // evita que se cierre al hacer clic
+        drop.classList.toggle('open');
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!navList.contains(e.target) && !toggle.contains(e.target)) {
+        navList.classList.remove('active');
+        dropdowns.forEach(drop => drop.classList.remove('open'));
+      }
+    });
+  });
+</script>
+</body>
+</html>
+
