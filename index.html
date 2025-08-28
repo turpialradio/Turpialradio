@@ -72,6 +72,7 @@
 
  <!-- HEADER -->
 <header class="site-header">
+  <button class="menu-toggle" aria-label="Abrir menú"><i class="fas fa-bars"></i></button>
   <nav class="navbar">
     <ul class="nav-list">
       <li><a href="index.html">Inicio</a></li>
@@ -106,9 +107,35 @@
 
   <!-- FOOTER -->
   <footer class="footer">
-    <p>&copy; 2025 Radio Turpial Music. Todos los derechos reservados.</p>
+    <p>&copy; 2025 Radio TV Turpial Music, Los Guayos Edo. Carabobo, Venezuela. Todos los derechos reservados.</p>
   </footer>
 
   <script src="script.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.querySelector('.menu-toggle');
+    const navList = document.querySelector('.nav-list');
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    toggle.addEventListener('click', () => {
+      navList.classList.toggle('active');
+    });
+
+    dropdowns.forEach(drop => {
+      drop.addEventListener('click', (e) => {
+        e.stopPropagation(); // evita que se cierre al hacer clic
+        drop.classList.toggle('open');
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!navList.contains(e.target) && !toggle.contains(e.target)) {
+        navList.classList.remove('active');
+        dropdowns.forEach(drop => drop.classList.remove('open'));
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
