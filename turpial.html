@@ -7,118 +7,124 @@
   <link rel="stylesheet" href="styles.css"> 
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <!-- CSS del reproductor Luna2 -->
+  <link href="https://extassisnetwork.com/player/Luna2/luna.css" type="text/css" rel="stylesheet">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      height: 100%;
+    }
+    .player-wrapper {
+      position: fixed;
+      top: 60px; /* deja visible el header */
+      left: 0;
+      width: 100%;
+      height: calc(100% - 120px); /* deja visible header + footer */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .blur {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      filter: blur(8px);
+      opacity: 0.4;
+    }
+    .extassis {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- HEADER: Navegación principal -->
-  <header class="site-header">
-    <nav class="navbar">
-      <ul class="nav-list">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="App-RadioTurpialMusicVE.apk" download>Descargar app</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- HEADER -->
+<header class="site-header">
+  <nav class="navbar">
+    <ul class="nav-list">
+      <li><a href="index.html">Inicio</a></li>
+      <li class="dropdown">
+        <a href="#">Más Emisoras ▾</a>
+        <ul class="dropdown-content">
+          <li><a href="index.html">📻 Radio Turpial Music</a></li>
+          <li><a href="urbetendencia.html">📻 Urbe Tendencia Radio</a></li>
+          <li><a href="https://huellas.com.ve/">📻 Huellas Radio</a></li>
+        </ul>
+      </li>
+      <li><a href="App-RadioTurpialMusicVE.apk" download>Descargar app</a></li>
+      <li><a href="https://player.mipanel.stream/pedido/6742">Solicitud de Canciones</a></li>
+      <li><a href="https://player.mipanel.stream/chat/6742">Chat</a></li>
 
-  <main>
-
-    <!-- HERO: Portada y publicidad -->
-    <section class="hero">
-      <img src="PORTADA RTM.png" alt="Portada Radio Turpial Music" class="hero-img">
-      <img src="portada de publicidad.png" alt="Publicidad" class="hero-img">
-    </section>
-
-    <!-- REDES SOCIALES -->
-    <section class="social-bar">
-      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://twitter.com"  target="_blank"><i class="fab fa-twitter"></i></a>
-      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-    </section>
-
-    <!-- CONTENIDO PRINCIPAL: dos columnas -->
-    <section class="content-wrapper">
-
-      <article class="left-col">
-  <img src="publi gif.gif" alt="Publicidad dinámica" class="responsive-img">
-
-  <!-- Sección de descarga -->
-  <div class="download-section">
-    <a href="App-RadioTurpialMusicVE.apk" download>
-      <img
-        src="nuestra app movil.gif"
-        alt="Descargar App"
-        class="app-download-btn">
-    </a>
-    <p class="download-text">
-      🎶 Lleva la vibra Turpial a donde vayas. ¡Descárgala ahora!
-    </p>
-  </div>
-
-  <!-- Instagram Feed (solo móvil) -->
-  <div class="instagram-mobile-only">
-    <script src="https://static.elfsight.com/platform/platform.js" async></script>
-    <div
-      class="elfsight-app-9da8bae3-ff89-4635-b4e8-68c9e80c88a2"
-      data-elfsight-app-lazy>
-    </div>
-  </div>
-
-  <!-- Facebook Feed de Elfsight -->
-  <div class="facebook-feed-widget" aria-label="Feed de Facebook de Radio Turpial Music">
-    <script src="https://static.elfsight.com/platform/platform.js" async></script>
-    <div
-      class="elfsight-app-284b2014-3c83-4959-ae0e-3729527a1d5e"
-      data-elfsight-app-lazy>
-    </div>
-  </div>
-</article>
-
-
-       <!-- Columna derecha: reproductores + Instagram Feed -->
-<aside class="right-col">
- <!-- Sección de audio -->
-<div class="audio-player-wrapper">
-  <p class="audio-player-text">
-    🎧 Sintoniza la mejor vibra musical de Radio Turpial Music aquí:
-  </p>
-  <iframe
-    src="https://player.mipanel.stream/player-sonic/6742"
-    frameborder="0"
-    width="100%"
-    height="105"
-    title="Reproductor de Radio Turpial Music">
-  </iframe>
-
-
-  <!-- Instagram Feed de Elfsight -->
-  <div class="instagram-feed-widget">
-    <script src="https://static.elfsight.com/platform/platform.js" async></script>
-    <div
-      class="elfsight-app-9da8bae3-ff89-4635-b4e8-68c9e80c88a2"
-      data-elfsight-app-lazy>
-    </div>
-  </div>
-</aside>
-    </section>
-
-    <div class="menu-container">
-  <button class="menu-button" aria-haspopup="true" aria-expanded="false" onclick="toggleMenu()">
-    E<br/>M<br/>I<br/>S<br/>O<br/>R<br/>A<br/>S
-  </button>
-
-  <nav class="menu" id="menu" role="menu">
-    <h2>📻 Emisoras de Radio</h2>
-    <ul>
-      <li><a role="menuitem" href="turpial.html">📻 Radio Turpial Music Ve</a></li>
-      <li><a role="menuitem" href="urbetendencia.html">📻 Urbe Tendencia Radio</a></li>
-      <li><a role="menuitem" href="huellas.html">📻 Huellas Radio</a></li>
+      <!-- Nuevo menú desplegable -->
+      
     </ul>
   </nav>
-</div>
+</header>
 
+  <!-- REPRODUCTOR LUNA2 -->
+  <main>
+    <div class="player-wrapper">
+      <!-- Fondo difuminado -->
+      <img class="blur" src="https://github.com/turpialradio/Turpialradio/blob/main/panel%20exagonales.jpg?raw=true" alt="Fondo">
 
-
+      <!-- Player -->
+      <div class="extassis" id="extassis"
+        data-userinterface="big"
+        data-backgroundcolor="linear-gradient(135deg, rgba(0, 0, 0, 0.3) 100%, rgba(255, 255, 255, 0.3) 0%)"
+        data-fontcolor="#ffffff"
+        data-hightlightcolor="#ff0000"
+        data-fontname="Montserrat"
+        data-googlefont="Montserrat"
+        data-fontratio="0.4"
+        data-radioname="Huellas Radio Valencia"
+        data-scroll="true"
+        data-coverimage="https://huellas.com.ve/wp-content/uploads/2025/06/cropped-1_20250422_072003_0000.png"
+        data-onlycoverimage="false"
+        data-coverstyle="animated"
+        data-usevisualizer="real"
+        data-visualizertype="6"
+        data-metadatatechnic="corsproxy"
+        data-corsproxy=""
+        data-usestreamcorsproxy="true"
+        data-streamurl="https://stream-179.zeno.fm/t8mvsdty0pxvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ0OG12c2R0eTBweHZ2IiwiaG9zdCI6InN0cmVhbS0xNzkuemVuby5mbSIsInJ0dGwiOjUsImp0aSI6IldHeUJ1REVqU202WnFkNElrU3RVMVEiLCJpYXQiOjE3NTYzODcxMzMsImV4cCI6MTc1NjM4NzE5M30.8pgircP9L6dJIgl7YFuQsH2YWSAjWTYuLrqKxrK6eMo"
+        data-streamtype="shoutcast2"
+        data-shoutcastpath="/live"
+        data-shoutcastid="1"
+        data-metadatainterval="20000"
+        data-volume="100"
+        data-autoplay="true"
+        data-displayliveicon="false"
+        data-debug="false"
+        data-multicolorvisualizer="true"
+        data-color1="#ff0000"
+        data-color2="#06ff00"
+        data-color3="#fff600"
+        data-color4="#0054ff"
+        data-visualizeropacity="0.9"
+        data-displayvisualizericon="true">
+      </div>
+    </div>
   </main>
+
+
+  <!-- Scripts Player -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" id="jquery-core-js"></script>
+  <script>
+    $radioURL = "https://stream-179.zeno.fm/t8mvsdty0pxvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ0OG12c2R0eTBweHZ2IiwiaG9zdCI6InN0cmVhbS0xNzkuemVuby5mbSIsInJ0dGwiOjUsImp0aSI6IldHeUJ1REVqU202WnFkNElrU3RVMVEiLCJpYXQiOjE3NTYzODcxMzMsImV4cCI6MTc1NjM4NzE5M30.8pgircP9L6dJIgl7YFuQsH2YWSAjWTYuLrqKxrK6eMo";
+    var animationactive = 0;
+    var songMem = new Array();
+    var ShowAlbumCover = true;
+  </script>
+  <script src="https://extassisnetwork.com/player/Luna2/luna.js"></script>
+  <script src="https://extassisnetwork.com/player/Luna2/luna2.js"></script>
+  <script src="https://extassisnetwork.com/player/Luna2/luna3.js"></script>
 
   <!-- FOOTER -->
   <footer class="footer">
@@ -128,3 +134,5 @@
   <script src="script.js"></script>
 </body>
 </html>
+
+
