@@ -35,24 +35,55 @@ body {
   justify-content: flex-end;    /* Fuerza todo el contenido hacia la derecha */
 }
 
-/* Si tienes otro elemento (logo, título...) antes del nav, mejor usar space-between:
-.site-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-} */
-
+/* Estilos básicos */
 .nav-list {
-  display: flex;
-  gap: 15px;
   list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-list li {
+  position: relative;
 }
 
 .nav-list a {
+  display: block;
+  padding: 10px 15px;
   color: #fff;
-  font-weight: bold;
   text-decoration: none;
 }
+
+.nav-list a:hover {
+  background-color: #ffcc00;
+  color: #000;
+}
+
+/* Contenido oculto del dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(0,0,0,0.95);
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
+  z-index: 10;
+}
+
+.dropdown-content li a {
+  padding: 10px;
+  color: #fff;
+}
+
+.dropdown-content li a:hover {
+  background-color: #ffcc00;
+  color: #000;
+}
+
+/* Mostrar al pasar el mouse */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 
 /* ============================= */
 /*     HERO: imágenes side-by-side      */
@@ -397,3 +428,5 @@ body {
     margin-top: 30px;
   }
 }
+
+
