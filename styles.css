@@ -563,3 +563,19 @@ iframe {
   }
 }
 
+
+/* ============================= */
+/*     FONDO CON IMAGEN          */
+/* ============================= */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: hsl(0, 0%, 97%);
+  line-height: 1.5;
+
+  /* Imagen de fondo */
+  background: url("https://github.com/turpialradio/Turpialradio/blob/main/Feliz%20a%C3%B1o%2020262.png?raw=true") no-repeat center center fixed;
+  background-size: cover;
+
+  /* Color de respaldo si la imagen no carga */
+  background-color: rgb(26, 26, 26);
+}
